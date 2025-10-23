@@ -1,46 +1,64 @@
-# Astro Starter Kit: Basics
+# Portafolio Personal de Nicolás Canelo Figueroa 💻
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Bienvenido al código fuente de mi portafolio personal! Este proyecto fue construido desde cero para mostrar mis habilidades, experiencia y los proyectos en los que he trabajado.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### 🚀 Puedes ver el sitio en vivo aquí: [portafolio-knelo.vercel.app](https://portafolio-knelo.vercel.app)
 
-## 🚀 Project Structure
+*(Reemplaza el enlace de arriba con tu URL de Vercel cuando la tengas)*
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+![Screenshot de la página de inicio del portafolio](ruta/a/un/screenshot.jpg)
+*(Sube un screenshot de tu portafolio al repositorio y reemplaza esta ruta)*
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 📖 Sobre este proyecto
 
-## 🧞 Commands
+Este portafolio es un sitio estático de página única (SPA) diseñado para ser rápido, responsive y fácil de navegar. Lo creé como una herramienta central para mi búsqueda de práctica profesional en el área de Ingeniería Civil Informática y Telecomunicaciones.
 
-All commands are run from the root of the project, from a terminal:
+Mi objetivo era aplicar conceptos modernos de desarrollo web y, al mismo tiempo, crear una "tarjeta de presentación" digital que reflejara mi trabajo.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🛠️ Stack Tecnológico (Tech Stack)
 
-## 👀 Want to learn more?
+Este sitio fue construido utilizando:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+* **Framework:** [Astro](https://astro.build/)
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com/) (para el diseño y UI)
+* **Iconos:** [Tabler Icons](https://tabler.io/icons)
+* **Despliegue:** [Vercel](https://vercel.com/)
+
+## 🏃 Cómo ejecutar este proyecto localmente
+
+Si deseas clonar y correr este proyecto en tu máquina local, sigue estos pasos:
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/Knelo8/Portafolio.git](https://github.com/Knelo8/Portafolio.git)
+    ```
+
+2.  **Navega al directorio del proyecto:**
+    ```bash
+    cd Portafolio
+    ```
+
+3.  **Instala las dependencias:**
+    (Se asume que tienes [Node.js](https://nodejs.org/) instalado)
+    ```bash
+    npm install
+    ```
+
+4.  **Inicia el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    ¡Abre [http://localhost:4321](http://localhost:4321) en tu navegador para ver el sitio!
+
+## 🏗️ Comandos útiles
+
+* `npm run dev`: Inicia el servidor local de desarrollo.
+* `npm run build`: Genera el *build* de producción en la carpeta `/dist`.
+* `npm run preview`: Previsualiza el *build* de producción localmente.
+
+## 🔗 Contacto
+
+* **LinkedIn:** [linkedin.com/in/tu-perfil](https://linkedin.com/in/tu-perfil)
+* **GitHub:** [@Knelo8](https://github.com/Knelo8)
