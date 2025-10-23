@@ -7,6 +7,7 @@ import SectionConteiner from "../components/SectionConteiner.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Proyectos from "../components/Proyectos.astro";
 import DevIcon from "../components/icons/Dev.astro";
+import KneloPhoto from "../assets/knelo.jpg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -20,7 +21,7 @@ import DevIcon from "../components/icons/Dev.astro";
   <SectionConteiner class="py-44 pb-24">
     <img
       class="rounded-full w-16 h-16 mb-5"
-      src="src/assets/knelo.jpg"
+      src={KneloPhoto.src}
       alt="knelo foto"
     />
     <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
