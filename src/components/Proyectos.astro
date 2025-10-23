@@ -2,6 +2,8 @@
 import GitHub from "./icons/GitHub.astro"
 import Web from "./icons/Web.astro"
 import Badge from "./Badge.astro"
+import mangifyImg from '../assets/Mangify.jpg';
+import iotImg from '../assets/ESP32.png';
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -9,7 +11,7 @@ import Badge from "./Badge.astro"
     class="bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]"
   >
     <img
-      src="/src/assets/Mangify.jpg"
+      src={mangifyImg.src}
       alt="Screenshot del proyecto 1"
       class="w-full h-56 object-cover"
     />
@@ -67,7 +69,7 @@ import Badge from "./Badge.astro"
     class="bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]"
   >
     <img
-      src="/src/assets/ESP32.png"
+      src={iotImg.src}
       alt="Screenshot del proyecto 1"
       class="w-full h-56 object-cover"
     />
