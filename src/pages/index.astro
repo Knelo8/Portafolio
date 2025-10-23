@@ -1,11 +1,116 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Badge from "../components/Badge.astro";
+import Experiencia from "../components/Experiencia.astro";
+import SectionConteiner from "../components/SectionConteiner.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Proyectos from "../components/Proyectos.astro";
+import DevIcon from "../components/icons/Dev.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Layout
+  title="Portafolio de Nicolás Canelo Figueroa - Estudiante de Ingeniería Civil Informática y Programador"
+  description="Este es el portafolio personal de Nicolás Canelo Figueroa, un estudiante de Ingeniería Civil Informática y Programador."
+/>
+<main>
+  <SectionConteiner class="py-44 pb-24">
+    <img
+      class="rounded-full w-16 h-16 mb-5"
+      src="src/assets/knelo.jpg"
+      alt="knelo foto"
+    />
+    <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+      Hola, Soy Nicolás Canelo Figueroa
+    </h1>
+    <h2 class="text-2xl opacity-80 text-wrap">
+      Estudiante de <span class="text-blue-200/80"
+        >Ingeniería Civil Informática y Telecomunicaciones</span
+      > en la <span class="text-red-200/80">Universidad Diego Portales</span>
+    </h2>
+    <p class="mb-4 mt-4">
+      Desarrollador web y entusiasta de la Programación Orientada a Objetos
+      (POO) con experiencia en docencia.
+    </p>
+    <Badge>Santiago, Chile</Badge>
+
+    <ul>
+      <li>
+        <a
+          class="rounded-full border border-white/10 flex justify-center items-center gap-x-2 px-1 py-2 bg-blue-500/30 hover:bg-purple-500/50 transition mb-4 mt-4"
+          href="https://www.linkedin.com/in/nicol%C3%A1s-canelo-figueroa-96868265/"
+          target="_blank"
+          ><svg
+            width="25"
+            height="25"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid"
+            viewBox="0 0 256 256"
+            ><path
+              d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+              fill="#0A66C2"></path></svg
+          >LinkedIn</a
+        >
+      </li>
+      <li>
+        <a
+          class="rounded-full border border-white/10 flex justify-center items-center gap-x-2 px-1 py-2 bg-green-500/30 hover:bg-purple-500/50 transition mb-4 mt-4"
+          href="https://github.com/Knelo8"
+          target="_blank"
+          ><svg
+            width="25"
+            height="25"
+            preserveAspectRatio="xMidYMid"
+            viewBox="0 0 256 256"
+            ><path
+              d="M128 0C57.308 0 0 57.308 0 128c0 56.627 36.688 104.418 87.438 121.5 6.375 1.188 8.688-2.75 8.688-6.125 0-3.062-.125-13.25-.188-24.125-35.438 7.688-43.062-17.125-43.062-17.125-5.75-14.625-14-18.5-14-18.5-11.438-7.75.875-7.625.875-7.625 12.625.875 19.625 12.875 19.625 12.875 11.125 19.125 29.125 13.625 36.125 10.5 1.125-8.125 4.375-13.625 8.125-16.75-28.125-3.125-57.75-14.125-57.75-62.875 0-13.875 5-25.375 13.125-34.5-1.312-3.125-5.625-15.875 1.25-33.125 0 0 10.625-3.375 34.75 12.875 10.125-2.875 21-4.25 32-4.25 11 0 21.875 1.375 32 4.25 24.125-16.25 34.75-12.875 34.75-12.875 6.875 17.25 2.562 30 1.25 33.125 8.125 9.125 13.125 20.625 13.125 34.5 0 48.875-29.625 59.75-57.75 62.875 4.625 4.062 8.875 12.125 8.875 24.125 0 17.375-.188 31.125-.188 35.375 0 3.375 2.312 7.5 8.688 6.125C219.312 232.418 256 184.627 256 128 256 57.308 198.692 0 128 0z"
+              fill="#181717"></path></svg
+          >GitHub</a
+        >
+        <a
+          class="rounded-full border border-white/10 flex justify-center items-center gap-x-2 px-1 py-2 bg-red-400/30 hover:bg-purple-500/50 transition mb-4 mt-4"
+          href="mailto:canelonicolas@gmail.com"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+            ></path><path d="M3 7l9 6l9 -6"></path></svg
+          >
+          Gmail</a
+        >
+      </li>
+    </ul>
+  </SectionConteiner>
+  <SectionConteiner id="experiencia">
+    <h2 class="text-3xl font-semibold text-white mb-6 gap-3 flex items-center">
+      <Briefcase class="size-8" />
+      Experiencia laboral
+    </h2>
+    <Experiencia />
+  </SectionConteiner>
+  <section id="projects" class="py-24 mx-auto px-4 w-full">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-semibold text-white mb-6 gap-3 flex items-center">
+          <DevIcon class="size-8" />
+          Proyectos
+        </h2>
+        
+        <Proyectos />
+
+      </div>
+    </section>
+  
+  
+</main>
