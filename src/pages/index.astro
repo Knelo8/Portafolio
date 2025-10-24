@@ -8,6 +8,11 @@ import Briefcase from "../components/icons/Briefcase.astro";
 import Proyectos from "../components/Proyectos.astro";
 import DevIcon from "../components/icons/Dev.astro";
 import KneloPhoto from "../assets/knelo.jpg";
+import Book from "../components/icons/Book.astro";
+import Estudios from "../components/Estudios.astro";
+import IdiomaIcon from "../components/icons/IconIdioma.astro";
+import IdiomasHabilidades from "../components/idiomas-habilidades.astro";
+import Code from "../components/icons/Code.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -17,14 +22,14 @@ import KneloPhoto from "../assets/knelo.jpg";
   title="Portafolio de Nicolás Canelo Figueroa - Estudiante de Ingeniería Civil Informática y Programador"
   description="Este es el portafolio personal de Nicolás Canelo Figueroa, un estudiante de Ingeniería Civil Informática y Programador."
 />
-<main>
+<main class="px-4">
   <SectionConteiner class="py-44 pb-24">
     <img
       class="rounded-full w-16 h-16 mb-5"
       src={KneloPhoto.src}
       alt="knelo foto"
     />
-    <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+    <h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">
       Hola, Soy Nicolás Canelo Figueroa
     </h1>
     <h2 class="text-2xl opacity-80 text-wrap">
@@ -101,17 +106,27 @@ import KneloPhoto from "../assets/knelo.jpg";
     </h2>
     <Experiencia />
   </SectionConteiner>
-  <section id="projects" class="py-24 mx-auto px-4 w-full">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-semibold text-white mb-6 gap-3 flex items-center">
+  <SectionConteiner id="proyectos">
+    <h2 class="text-3xl font-semibold text-white mb-6 gap-3 flex items-center">
           <DevIcon class="size-8" />
           Proyectos
         </h2>
-        
         <Proyectos />
-
       </div>
-    </section>
-  
-  
+    </SectionConteiner>
+  <SectionConteiner id="estudios">
+    <h2 class="text-3xl font-semibold text-white mb-6 gap-3 flex items-center mt-6">
+      <Book class="size-15" />
+      Estudios
+    </h2>
+    <Estudios />
+  </SectionConteiner>
+  <SectionConteiner id="idiomas">
+    <h2 class="text-3xl font-semibold text-white mb-6 gap-3 flex items-center">
+      <IdiomaIcon class="size-15" />
+      Idiomas y Habilidades
+      <Code class="size-15" />
+    </h2>
+    <IdiomasHabilidades />
+  </SectionConteiner>
 </main>
