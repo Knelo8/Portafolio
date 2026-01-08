@@ -1,118 +1,103 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import Web from "./icons/Web.astro"
-import Badge from "./Badge.astro"
+// Importamos las imágenes
 import mangifyImg from '../assets/Mangify.jpg';
 import iotImg from '../assets/ESP32.png';
+import kneloImg from '../assets/knelo.jpg';
+import discordBotImg from '../assets/discord-music-bot.png';
+
+
+const PROJECTS = [
+  {
+    title: "MangifyWeb",
+    description: "Servicio diseñado para enriquecer la experiencia de lectura de mangas. Ofrece música ambiental contextual y herramientas para bloquear viñetas futuras, evitando spoilers.",
+    link: "https://github.com/Knelo8/MangifyWeb/tree/902f4b233dcb91ef4a8ef4928618b56b4653b370",
+    github: "https://github.com/AlexMarambio/Mangify/tree/master",
+    image: mangifyImg,
+    tags: [
+      { name: "TypeScript", class: "text-cyan-300 bg-cyan-900/60" },
+      { name: "React", class: "text-green-300 bg-green-900/60" },
+      { name: "CSS y HTML", class: "text-purple-300 bg-purple-900/60" },
+    ],
+  },
+  {
+    title: "Sistema de Monitoreo Ambiental",
+    description: "Dispositivo IoT diseñado para el monitoreo en tiempo real de condiciones ambientales en salas de clases (humedad, humo, luz y temperatura). Desarrollado para cumplir con normativas chilenas de salubridad.",
+    link: null, // Este proyecto no tiene web, así que lo dejamos en null
+    github: "https://github.com/Knelo8/IoT-monitoreo-aulas",
+    image: iotImg,
+    tags: [
+      { name: "ESP32", class: "text-cyan-300 bg-cyan-900/60" },
+      { name: "C/C++", class: "text-green-300 bg-green-900/60" },
+      { name: "Sensores IoT", class: "text-purple-300 bg-purple-900/60" },
+    ],
+  },
+  {
+    title: "discord-music-bot",
+    description: "Un bot de música para Discord avanzado y robusto, diseñado para ofrecer reproducción de alta calidad desde YouTube y Spotify, con gestión de colas y letras de canciones",
+    link: null,
+    github: "https://github.com/Knelo8/discord-music-bot",
+    image: discordBotImg,
+    tags: [
+      { name: "Python", class: "text-cyan-300 bg-cyan-900/60" },
+    ],
+  },
+]
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div
-    class="bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]"
-  >
-    <img
-      src={mangifyImg.src}
-      alt="Screenshot del proyecto 1"
-      class="w-full h-56 object-cover"
-    />
+  {
+    PROJECTS.map((project) => (
+      <div class="bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]">
+        <img
+          src={project.image.src}
+          alt={`Screenshot del proyecto ${project.title}`}
+          class="w-full h-56 object-cover"
+        />
 
-    <div class="p-6">
-      <h3 class="text-xl font-semibold text-white mb-2 flex items-center gap-2">
-        MangifyWeb
-      </h3>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white mb-2 flex items-center gap-2">
+            {project.title}
+          </h3>
 
-      <p class="text-gray-400 text-base mb-4">
-        Servicio diseñado para enriquecer la experiencia de lectura de mangas. Ofrece música ambiental contextual y herramientas para bloquear viñetas futuras, evitando spoilers.
+          <p class="text-gray-400 text-base mb-4">
+            {project.description}
+          </p>
 
+          <div class="flex flex-wrap gap-2 mb-4">
+            {project.tags.map((tag) => (
+              <span class={`text-xs font-semibold py-1 px-3 rounded-full ${tag.class}`}>
+                {tag.name}
+              </span>
+            ))}
+          </div>
 
-      </p>
-
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span
-          class="text-xs font-semibold text-cyan-300 bg-cyan-900/60 py-1 px-3 rounded-full"
-          >TypeScript</span
-        >
-        <span
-          class="text-xs font-semibold text-green-300 bg-green-900/60 py-1 px-3 rounded-full"
-          >React</span
-        >
-        <span
-          class="text-xs font-semibold text-purple-300 bg-purple-900/60 py-1 px-3 rounded-full"
-          >CSS y HTML</span
-        >
+          <div class="flex gap-4">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-gray-300 hover:text-white font-medium"
+            >
+              <GitHub class="w-5 h-5" />
+              <span class="ml-2">Código</span>
+            </a>
+            
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-gray-300 hover:text-white font-medium"
+              >
+                <Web class="size-7" />
+                <span class="ml-2">Web</span>
+              </a>
+            )}
+          </div>
+        </div>
       </div>
-
-      <div class="flex gap-4">
-        <a
-          href="https://github.com/AlexMarambio/Mangify/tree/master"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center text-gray-300 hover:text-white font-medium"
-          >
-          <GitHub class="w-5 h-5" />
-          <span class="ml-2">Código</span>
-        </a>
-        <a
-        href="https://github.com/Knelo8/MangifyWeb/tree/902f4b233dcb91ef4a8ef4928618b56b4653b370"
-        target="_blank"
-        rel="noopener noreferrer"
-          class="flex items-center text-gray-300 hover:text-white font-medium"
-        >
-          <Web class="size-7" />
-          <span class="ml-2">Web</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]"
-  >
-    <img
-      src={iotImg.src}
-      alt="Screenshot del proyecto 1"
-      class="w-full h-56 object-cover"
-    />
-
-    <div class="p-6">
-      <h3 class="text-xl font-semibold text-white mb-2 flex items-center gap-2">
-        Sistema de Monitoreo Ambiental para Aulas
-      </h3>
-
-      <p class="text-gray-400 text-base mb-4">
-        Dispositivo IoT diseñado para el monitoreo en tiempo real de condiciones ambientales en salas de clases (humedad, humo, luz y temperatura). Desarrollado para cumplir con normativas chilenas de salubridad.
-
-
-      </p>
-
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span
-          class="text-xs font-semibold text-cyan-300 bg-cyan-900/60 py-1 px-3 rounded-full"
-          >ESP32</span
-        >
-        <span
-          class="text-xs font-semibold text-green-300 bg-green-900/60 py-1 px-3 rounded-full"
-          >C/C++</span
-        >
-        <span
-          class="text-xs font-semibold text-purple-300 bg-purple-900/60 py-1 px-3 rounded-full"
-          >Sensores IoT</span
-        >
-      </div>
-
-      <div class="flex gap-4">
-        <a
-          href="https://github.com/Knelo8/IoT-monitoreo-aulas"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center text-gray-300 hover:text-white font-medium"
-          >
-          <GitHub class="w-5 h-5" />
-          <span class="ml-2">Código</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-
+    ))
+  }
 </div>
